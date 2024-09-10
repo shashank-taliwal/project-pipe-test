@@ -1,0 +1,15 @@
+pipelines:
+  - name: chron_pipe
+    configuration: 
+      chronological: true
+    steps:
+      - name: step1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "Hello, World!"
+      - name: step2
+        type: Bash
+        execution:
+          onExecute:
+            - echo "This step is executed after step1"
